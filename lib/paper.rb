@@ -3,14 +3,13 @@ require_relative 'scissors.rb'
 require_relative 'rock.rb'
 
 class Paper < Thing
+  RESULTS = {
+    'Rock' => true,
+    'Scissors' => false,
+    'Paper' => nil
+  }
+
   def beats(thing)
-    case thing
-    when Rock
-      true
-    when Scissors
-      false
-    when Paper
-      nil
-    end
+    RESULTS[thing.class.to_s]
   end
 end
