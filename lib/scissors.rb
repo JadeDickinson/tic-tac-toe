@@ -8,8 +8,4 @@ class Scissors < Thing
     'Rock' => false,
     'Scissors' => nil
   }
-
-  def beats(thing)
-    RESULTS[thing.class.to_s]
-  end
 end

@@ -1,5 +1,5 @@
 class Thing
-  def beats
-    puts "beats method"
+  def beats(thing)
+    self.class::RESULTS[thing.class.to_s]
   end
 end
